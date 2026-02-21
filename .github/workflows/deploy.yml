@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Убедись, что твоя ветка называется main, а не master
+    branches: ["main"] # Если твоя ветка называется master, замени на master
 
 permissions:
   contents: read
@@ -31,7 +31,6 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          # Загружаем содержимое папки dist
           path: ./dist
 
   deploy:
